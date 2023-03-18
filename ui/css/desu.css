@@ -17,3 +17,16 @@ html,body {
 nav .brand-logo {
   padding-left: 1em;
 }
+
+/* Server List */
+
+.server-name {
+  font-weight: bold;
+  font-size: 120%;
+  padding-top: 1em;
+}
+
+.channel-name .material-icons {
+  font-size:75%;
+  padding-right: 0.25em;
+}

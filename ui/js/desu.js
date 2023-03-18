@@ -7,19 +7,35 @@ let html = htm.bind(preact.h);
 function ServerList(props) {
   const [servers, setServers] = preactHooks.useState([
     {
-      name: 'A' 
+      name: 'A Sexy Server',
+      channels: [
+        {name: 'Sexy Chicks', encrypted: true},
+        {name: 'More Sexy Chicks', encrypted: true},
+        {name: 'Nudes You Should Not Share', encrypted: true}
+      ]
     },
     {
-      name: 'B' 
+      name: 'Serious Server',
+      channels: [
+        {name: 'Growing Beareds', encrypted: false},
+        {name: 'The right tools for your workshop.', encrypted: false},
+        {name: 'Pinups', encrypted: true}
+      ] 
     }
   ]);
 
   return html`
-    <ul>
+    <div id="server-list">
       ${servers.map(server => html`
-        <li>${server.name}</li>
+        <div class="server-name">${server.name}</div>
+        ${server.channels.map(channel => html`
+            <div class="channel-name">
+              <i class="material-icons">${channel.encrypted ? html`lock` : html`visibility`}</i>
+              ${channel.name}
+            </div>
+        `)}
       `)}
-    </ul>
+    </div>
   `;
 }
 

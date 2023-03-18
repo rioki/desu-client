@@ -4,7 +4,8 @@
   "description": "The client for the desu chat protocoll.",
   "main": "app/index.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "cross-env NODE_ENV=production electron-forge start",
+    "dev": "cross-env NODE_ENV=development electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
@@ -21,9 +22,9 @@
     "@electron-forge/maker-rpm": "^6.0.5",
     "@electron-forge/maker-squirrel": "^6.0.5",
     "@electron-forge/maker-zip": "^6.0.5",
-    "electron": "^23.1.4"
-  },
-  "dependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^23.1.4",
+    "electron-settings": "^4.0.2",
     "electron-squirrel-startup": "^1.0.0"
   }
 }
