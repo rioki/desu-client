@@ -1,0 +1,19 @@
+
+html,body { 
+  margin: 0px; 
+  padding: 0px; 
+  height:100%; 
+  color: white;
+}
+
+.page { 
+  min-height: 100vh;
+}
+
+.row .col.full-height { 
+  min-height: calc(100vh - 64px);
+}
+
+nav .brand-logo {
+  padding-left: 1em;
+}
